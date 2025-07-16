@@ -18,7 +18,7 @@ O **Minhas Músicas** é um sistema Java para gerenciar e classificar conteúdos
    ```
 2. Compile os arquivos Java:
    ```bash
-   cd minhas-musicas/src
+   cd desafio-musicas/src
    javac br/com/alura/minhasmusicas/principal/Principal.java
    ```
 3. Execute o programa:
