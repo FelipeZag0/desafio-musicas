@@ -1,10 +1,12 @@
 package br.com.alura.minhasmusicas.modelos;
 
-public class Musica extends Audio{
+public class Musica extends Audio {
+
     private String album;
     private String artista;
     private String genero;
 
+    // Getters e Setters
     public String getAlbum() {
         return album;
     }
@@ -29,6 +31,7 @@ public class Musica extends Audio{
         this.genero = genero;
     }
 
+    // Lógica de classificação personalizada
     @Override
     public int getClassificacao() {
         if (this.getTotalReproducoes() > 2000) {
@@ -36,5 +39,15 @@ public class Musica extends Audio{
         } else {
             return 7;
         }
+    }
+
+    // Exibição formatada da ficha técnica
+    public void exibirFicha() {
+        System.out.println("\n--- Ficha Técnica ---");
+        System.out.println("Música: " + getTitulo());
+        System.out.println("Artista: " + artista);
+        if(album != null) System.out.println("Álbum: " + album);
+        if(genero != null) System.out.println("Gênero: " + genero);
+        System.out.println("Duração: " + getDuracaoFormatada());
     }
 }

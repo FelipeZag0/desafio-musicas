@@ -29,4 +29,11 @@ public class Podcast extends Audio {
         }
 
     }
+
+    public void exibirFicha() {
+        System.out.println("\n--- Ficha Técnica ---");
+        System.out.println("Podcast: " + getTitulo());
+        System.out.println("Host: " + host);
+        System.out.println("Duração: " + getDuracaoFormatada());
+    }
 }
